@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Purewater Pool Concierge — licensed residential pool cleaning and maintenance across San Diego."
+    />
+    <title>Purewater Pool Concierge | San Diego Pool Cleaning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0A0A0A",
+              paper: "#FAFAFA",
+              lagoon: "#0E7490",
+              aqua: "#22D3EE",
+              coral: "#F97066",
+              palm: "#2DD4BF",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+              serif: ["Instrument Serif", "ui-serif", "Georgia", "serif"],
+            },
+            boxShadow: {
+              card: "0 1px 2px rgba(10,10,10,0.04), 0 12px 32px rgba(10,10,10,0.06)",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .hero-wash {
+          background:
+            radial-gradient(1200px 500px at 80% -10%, rgba(34, 211, 238, 0.18), transparent 55%),
+            radial-gradient(900px 420px at 10% 110%, rgba(45, 212, 191, 0.16), transparent 50%),
+            linear-gradient(180deg, #0a0a0a 0%, #111827 55%, #0a0a0a 100%);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-paper text-ink font-sans antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2"
+    >
+      Skip to content
+    </a>
+
+    <header class="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
+        <a href="#top" class="group flex items-center gap-3" aria-label="Purewater Pool Concierge home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-aqua">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M4 14c3.5-1.5 5.5-4 8-8 2.5 4 4.5 6.5 8 8-3.2 3.8-6 6-8 6s-4.8-2.2-8-6Z"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="leading-tight">
+            <span class="block text-[11px] font-semibold uppercase tracking-[0.22em] text-black/50">
+              Purewater
+            </span>
+            <span class="block text-sm font-semibold tracking-tight">Pool Concierge</span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#services" class="text-sm font-medium text-black/70 transition hover:text-ink">Services</a>
+          <a href="#about" class="text-sm font-medium text-black/70 transition hover:text-ink">About</a>
+          <a href="#contact" class="text-sm font-medium text-black/70 transition hover:text-ink">Contact</a>
+          <a
+            href="tel:+16195550148"
+            class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black"
+          >
+            Call Now
+          </a>
+        </div>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg id="icon-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden border-t border-black/5 bg-white px-5 py-4 md:hidden">
+        <div class="flex flex-col gap-3">
+          <a href="#services" class="rounded-xl px-3 py-2 text-base font-medium hover:bg-black/5">Services</a>
+          <a href="#about" class="rounded-xl px-3 py-2 text-base font-medium hover:bg-black/5">About</a>
+          <a href="#contact" class="rounded-xl px-3 py-2 text-base font-medium hover:bg-black/5">Contact</a>
+          <a
+            href="tel:+16195550148"
+            class="mt-1 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white"
+          >
+            Call Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero-wash relative scroll-mt-24 overflow-hidden text-white">
+        <div
+          class="pointer-events-none absolute inset-0 opacity-40"
+          aria-hidden="true"
+          style="
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.18) 1px, transparent 0);
+            background-size: 28px 28px;
+          "
+        ></div>
+        <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
+          <div>
+            <p class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-aqua">San Diego · Residential</p>
+            <h1 class="font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.25rem]">
+              Pools that look like vacation, every week.
+            </h1>
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+              Purewater Pool Concierge keeps San Diego homes crystal-clear with discreet, on-schedule service.
+              Licensed techs. Honest chemistry. Water you’d actually swim in.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:bg-aqua hover:text-ink"
+              >
+                Get a Free Quote
+              </a>
+              <p class="text-sm text-white/55 sm:pl-2">Same-week visits · No long-term contracts</p>
+            </div>
+          </div>
+
+          <div
+            class="relative min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-card sm:min-h-[360px]"
+            role="img"
+            aria-label="Placeholder image of a sunlit San Diego swimming pool"
+          >
+            <div class="absolute inset-0 bg-gradient-to-br from-lagoon/70 via-ink/20 to-palm/40"></div>
+            <svg class="absolute -bottom-8 left-0 w-[140%]" viewBox="0 0 1440 320" aria-hidden="true">
+              <path
+                fill="rgba(34,211,238,0.35)"
+                d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,208C672,213,768,171,864,144C960,117,1056,107,1152,122.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L0,320Z"
+              ></path>
+              <path
+                fill="rgba(45,212,191,0.28)"
+                d="M0,256L60,240C120,224,240,192,360,186.7C480,181,600,203,720,197.3C840,192,960,160,1080,160C1200,160,1320,192,1380,208L1440,224L1440,320L0,320Z"
+              ></path>
+            </svg>
+            <div class="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/15 bg-black/35 p-4 backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.2em] text-white/60">Hero background placeholder</p>
+              <p class="mt-1 font-serif text-2xl">Replace with your pool photo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 lg:px-8 lg:py-24">
+        <div class="mb-12 max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.28em] text-lagoon">Services</p>
+          <h2 class="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Care that stays out of your way.</h2>
+          <p class="mt-4 text-black/60">
+            Three core offerings for backyard pools from La Jolla to Chula Vista. Swap this copy anytime.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-black/8 bg-white p-7 shadow-card">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-aqua">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 4v4M17 4v4M4 9h16M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Weekly Maintenance</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/60">
+              A standing visit so your water stays guest-ready without you thinking about it.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-black/75">
+              <li class="flex gap-2"><span class="text-lagoon">•</span> Skim, brush, and vacuum</li>
+              <li class="flex gap-2"><span class="text-lagoon">•</span> Basket and filter checks</li>
+              <li class="flex gap-2"><span class="text-lagoon">•</span> Water-level and equipment glance</li>
+            </ul>
+          </article>
+
+          <article class="rounded-3xl border border-black/8 bg-white p-7 shadow-card">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-palm">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 4v16M8 8c0-2 8-2 8 2s-8 2-8 6 8 2 8 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Chemical Balancing</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/60">
+              Precise testing so the water feels soft, stays clear, and protects plaster and equipment.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-black/75">
+              <li class="flex gap-2"><span class="text-palm">•</span> pH, alkalinity, and sanitizer</li>
+              <li class="flex gap-2"><span class="text-palm">•</span> Calcium and stabilizer checks</li>
+              <li class="flex gap-2"><span class="text-palm">•</span> Dose notes after every visit</li>
+            </ul>
+          </article>
+
+          <article class="rounded-3xl border border-black/8 bg-white p-7 shadow-card">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-coral">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 16c4-8 12-8 16 0M8 19a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Green-to-Clean Recovery</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/60">
+              Algae bloom after a trip or a missed season? We bring the pool back to swim-ready.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-black/75">
+              <li class="flex gap-2"><span class="text-coral">•</span> Shock, clarifier, and brushing plan</li>
+              <li class="flex gap-2"><span class="text-coral">•</span> Filter cleaning as needed</li>
+              <li class="flex gap-2"><span class="text-coral">•</span> Follow-up until water is clear</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="scroll-mt-24 border-y border-black/5 bg-white">
+        <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-lagoon">About / Trust</p>
+            <h2 class="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Concierge service, neighborhood reliability.</h2>
+            <p class="mt-4 max-w-lg text-black/60">
+              Purewater Pool Concierge is a San Diego residential route service. This paragraph is a placeholder —
+              add your story, neighborhoods, and years in the water.
+            </p>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex gap-4 rounded-2xl border border-black/8 bg-paper p-5">
+              <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-aqua">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">Licensed &amp; Insured</p>
+                <p class="mt-1 text-sm text-black/60">License #000000 · Proof of insurance on request (placeholders).</p>
+              </div>
+            </li>
+            <li class="flex gap-4 rounded-2xl border border-black/8 bg-paper p-5">
+              <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-palm">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 7h16M7 3v4M17 3v4M6 11h4M6 15h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">Reliable Weekly Schedule</p>
+                <p class="mt-1 text-sm text-black/60">Same-day window each week. Text if we ever run late.</p>
+              </div>
+            </li>
+            <li class="flex gap-4 rounded-2xl border border-black/8 bg-paper p-5">
+              <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-coral">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">No Long-Term Contracts</p>
+                <p class="mt-1 text-sm text-black/60">Stay because the water looks right — cancel anytime, no fuss.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 lg:px-8 lg:py-24">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-lagoon">Contact</p>
+            <h2 class="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Tell us about the pool.</h2>
+            <p class="mt-4 text-black/60">
+              Request a free quote. We typically reply the same business day.
+            </p>
+            <dl class="mt-8 space-y-4 text-sm">
+              <div>
+                <dt class="text-black/45">Phone</dt>
+                <dd>
+                  <a href="tel:+16195550148" class="font-medium hover:text-lagoon">(619) 555-0148</a>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-black/45">Email</dt>
+                <dd>
+                  <a href="mailto:hello@example.com" class="font-medium hover:text-lagoon">hello@example.com</a>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-black/45">Service area</dt>
+                <dd class="font-medium">San Diego County (placeholder neighborhoods)</dd>
+              </div>
+            </dl>
+          </div>
+
+          <form
+            id="quote-form"
+            class="rounded-3xl border border-black/8 bg-white p-6 shadow-card sm:p-8"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <div class="grid gap-5">
+              <label class="block">
+                <span class="mb-2 block text-sm font-medium">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Jordan Rivera"
+                  class="w-full rounded-2xl border border-black/10 bg-paper px-4 py-3 text-sm outline-none ring-lagoon/30 transition focus:border-lagoon focus:ring-4"
+                />
+              </label>
+              <label class="block">
+                <span class="mb-2 block text-sm font-medium">Phone</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  placeholder="(619) 555-0100"
+                  class="w-full rounded-2xl border border-black/10 bg-paper px-4 py-3 text-sm outline-none ring-lagoon/30 transition focus:border-lagoon focus:ring-4"
+                />
+              </label>
+              <label class="block">
+                <span class="mb-2 block text-sm font-medium">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  class="w-full rounded-2xl border border-black/10 bg-paper px-4 py-3 text-sm outline-none ring-lagoon/30 transition focus:border-lagoon focus:ring-4"
+                />
+              </label>
+              <label class="block">
+                <span class="mb-2 block text-sm font-medium">What’s going on with the pool?</span>
+                <select
+                  name="pool_issue"
+                  required
+                  class="w-full appearance-none rounded-2xl border border-black/10 bg-paper px-4 py-3 text-sm outline-none ring-lagoon/30 transition focus:border-lagoon focus:ring-4"
+                >
+                  <option value="" disabled selected>Select an issue</option>
+                  <option value="weekly">Need weekly maintenance</option>
+                  <option value="chemicals">Water looks off / chemical balancing</option>
+                  <option value="green">Green-to-clean recovery</option>
+                  <option value="equipment">Pump, filter, or heater issue</option>
+                  <option value="other">Something else</option>
+                </select>
+              </label>
+              <button
+                type="submit"
+                class="mt-1 inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-black"
+              >
+                Send quote request
+              </button>
+              <p id="form-status" class="hidden text-sm font-medium text-lagoon" role="status"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <p class="font-serif text-2xl">Purewater Pool Concierge</p>
+          <p class="mt-2 text-sm text-white/50">© <span id="year"></span> Purewater Pool Concierge. All rights reserved.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a
+            href="#"
+            aria-label="Instagram placeholder"
+            class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-aqua hover:text-aqua"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Facebook placeholder"
+            class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-aqua hover:text-aqua"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.6.4-1 1-1Z" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Yelp placeholder"
+            class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-aqua hover:text-aqua"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3l2.1 6.4H21l-5.4 3.9 2.1 6.4L12 16.8 6.3 19.7l2.1-6.4L3 9.4h6.9L12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        var iconOpen = document.getElementById("icon-open");
+        var iconClose = document.getElementById("icon-close");
+        var year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+
+        function setMenu(open) {
+          menu.classList.toggle("hidden", !open);
+          iconOpen.classList.toggle("hidden", open);
+          iconClose.classList.toggle("hidden", !open);
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+
+        toggle.addEventListener("click", function () {
+          setMenu(menu.classList.contains("hidden"));
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenu(false);
+          });
+        });
+
+        var form = document.getElementById("quote-form");
+        var status = document.getElementById("form-status");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (!form.reportValidity()) return;
+          status.textContent = "Thanks — your quote request is ready to send. Connect this form to your inbox when you have one.";
+          status.classList.remove("hidden");
+          form.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
